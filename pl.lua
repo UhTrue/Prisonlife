@@ -454,7 +454,7 @@ TextLabel_3.TextSize = 14.000
 
 -- Scripts:
 
-local function NAGCUIK_fake_script() -- PrisonLife.LocalScript 
+local function GOXT_fake_script() -- PrisonLife.LocalScript 
 	local script = Instance.new('LocalScript', PrisonLife)
 
 	local targetplayer = script.Parent.Target.Text
@@ -764,27 +764,27 @@ local function NAGCUIK_fake_script() -- PrisonLife.LocalScript
 		game.Workspace.Prison_spawn.Nexus.SpawnLocation.TeamColor = "Medium stone grey"
 	end)
 end
-coroutine.wrap(NAGCUIK_fake_script)()
-local function RZTGDBP_fake_script() -- PrisonLife.Dragify 
+coroutine.wrap(GOXT_fake_script)()
+local function JXQY_fake_script() -- PrisonLife.Drag3 
 	local script = Instance.new('LocalScript', PrisonLife)
 
 	local UIS = game:GetService("UserInputService")
-	function dragify(Frame)
-	    dragToggle = nil
+	function dragify(d)
+	    local dragToggle = nil
 	    local dragSpeed = 0.50
-	    dragInput = nil
-	    dragStart = nil
+	    local dragInput = nil
+	    local dragStart = nil
 	    local dragPos = nil
 	    function updateInput(input)
 	        local Delta = input.Position - dragStart
 	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	        game:GetService("TweenService"):Create(d, TweenInfo.new(0.30), {Position = Position}):Play()
 	    end
-	    Frame.InputBegan:Connect(function(input)
+	    d.InputBegan:Connect(function(input)
 	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
 	            dragToggle = true
 	            dragStart = input.Position
-	            startPos = Frame.Position
+	            startPos = d.Position
 	            input.Changed:Connect(function()
 	                if input.UserInputState == Enum.UserInputState.End then
 	                    dragToggle = false
@@ -792,7 +792,7 @@ local function RZTGDBP_fake_script() -- PrisonLife.Dragify
 	            end)
 	        end
 	    end)
-	    Frame.InputChanged:Connect(function(input)
+	    d.InputChanged:Connect(function(input)
 	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 	            dragInput = input
 	        end
@@ -806,4 +806,4 @@ local function RZTGDBP_fake_script() -- PrisonLife.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(RZTGDBP_fake_script)()
+coroutine.wrap(JXQY_fake_script)()
