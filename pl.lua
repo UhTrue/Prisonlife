@@ -69,7 +69,7 @@ PrisonLife.Parent = RinoLife
 PrisonLife.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 PrisonLife.Position = UDim2.new(0.512474, 0, 0.246701837, 0)
 PrisonLife.Size = UDim2.new(0.361746371, 0, 0.290237457, 0)
-PrisonLife.Visible = false
+PrisonLife.Visible = true
 
 Topbar.Name = "Topbar"
 Topbar.Parent = PrisonLife
